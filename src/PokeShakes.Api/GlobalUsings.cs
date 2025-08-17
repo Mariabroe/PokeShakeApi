@@ -1,0 +1,12 @@
+global using System;
+global using System.Collections.Generic;
+global using System.Net.Http; 
+global using System.Net;
+global using System.Net.Http.Json;       
+global using System.Threading.Tasks;
+global using Microsoft.AspNetCore.Mvc;
+global using System.Text.Json.Serialization;
+global using PokeShakes.Api.DTO;
+global using PokeShakes.Api.Models;
+global using PokeShakes.Api.Services;
+global using PokeShakes.Api.Helpers;
