@@ -18,22 +18,30 @@ PokeShake is an ASP.NET Core Web API that fetches Pokémon flavor text (from htt
 
 ---
 
-### 🔧 Running locally (without Docker)
+## Quick Start (do this first)
+Clone the repository and enter the folder:
 
 ```bash
 git clone https://github.com/Mariabroe/PokeShakeApi.git
 cd PokeShakeApi
+```
+
+___
+
+### Run locally (without Docker)
+
+```bash
 dotnet restore
 dotnet build
 dotnet run --project src/PokeShakeApi
-
 ```
+
 The API will start on: <http://localhost:5000/swagger>
 
 
 ___
 
-## Running with Docker
+## Run with Docker
 
 ```bash
 docker build -t pokeshakeapi .
