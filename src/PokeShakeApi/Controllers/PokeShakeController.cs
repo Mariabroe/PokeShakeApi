@@ -8,6 +8,7 @@ namespace PokeShakeApi.Controllers;
 public class PokeShakeController : ControllerBase
 {
     [HttpGet("{idOrName}")]
+    [ProducesResponseType(typeof(PokeShakeDto), StatusCodes.Status200OK)]
     public async Task<ActionResult<PokeShakeDto>> Get(string idOrName, [FromServices] IPokeShakeService pokeShakeService)
     {
         try
