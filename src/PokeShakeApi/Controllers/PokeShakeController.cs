@@ -3,6 +3,8 @@ namespace PokeShakeApi.Controllers;
 
 [ApiController]
 [Route("pokemon")]
+[Produces("application/json")]
+[Tags("Pokemon")]
 public class PokeShakeController : ControllerBase
 {
     [HttpGet("{idOrName}")]
