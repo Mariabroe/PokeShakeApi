@@ -13,9 +13,6 @@ public class PokeShakeService(IHttpClientFactory httpFactory) : IPokeShakeServic
         var pokeClient = httpFactory.CreateClient("poke");
         
         var responseMessage = await pokeClient.GetAsync($"pokemon-species/{Uri.EscapeDataString(idOrName)}");
-        if (responseMessage.StatusCode == HttpStatusCode.NotFound)
-            throw new HttpRequestException("pokemon_not_found", null, HttpStatusCode.NotFound);
-
         responseMessage.EnsureSuccessStatusCode();
 
         var pokemon = await responseMessage.Content.ReadFromJsonAsync<Pokemon>()
